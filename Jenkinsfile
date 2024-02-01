@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t rubydc-demo/mywebapp-k8:latest .'
+        sh 'docker build -t rubymdc/mywebapp-k8:latest .'
       }
     }
     stage('Login') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push rubydc-demo/mywebapp-k8:latest'
+        sh 'docker push rubymdc/mywebapp-k8:latest'
       }
     }
     stage('Deploy') {
